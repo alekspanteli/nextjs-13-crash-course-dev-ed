@@ -1,4 +1,14 @@
 import "./globals.css";
+import { Roboto } from 'next/font/google';
+
+// If loading a variable font, you don't need to specify the font weight
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto',
+  // display: 'swap'
+})
+
 
 export const metadata = {
   title: "Create Next App",
@@ -7,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${roboto.variable} font-roboto`}>
       <body>
         <h1>Logo</h1>
         <nav>
