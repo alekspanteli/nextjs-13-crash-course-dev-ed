@@ -16,9 +16,10 @@ export default async function Home() {
     <main>
       <h1 className="mb-5 text-xl font-bold">Hello next 13</h1>
       <div className="grid grid-cols-4 gap-4">
-        {res.results.map((props) => (
+        {res.results.map((movie) => (
           <Movie
-            {...props}
+            key={movie.id}
+            movie={movie}
            />
         ))}
       </div>
