@@ -1,3 +1,5 @@
+import Movie from "./Movie"
+
 export const metadata = {
   title: "Home",
   description: "Home page goes here",
@@ -12,15 +14,13 @@ export default async function Home() {
 
   return (
     <main>
-      <h1 className="text-lg">Hello next 13</h1>
+      <h1 className="mb-5 text-xl font-bold">Hello next 13</h1>
       <div className="grid grid-cols-4 gap-4">
-      {res.results.map((movie) => (
-        
-          <article className="shadow p-8">
-            <h1>{movie.title}</h1>
-          </article>
-        
-      ))}
+        {res.results.map((props) => (
+          <Movie
+            {...props}
+           />
+        ))}
       </div>
     </main>
   );
