@@ -7,18 +7,18 @@ export default async function Movie({ movie }) {
     <article className="rounded border-2 border-slate-300 p-8">
       <h1>{movie.title}</h1>
       <h2>Release date: {movie.release_date}</h2>
-      {/* <Link href={`/asd`}>
+      <Link href={`/asd`}>
         <Image
-          src={imagePath + poster_path}
-          alt={title}
+          src={imagePath + movie.poster_path}
+          alt={movie.title}
           width={500} 
           height={500}
         />
-      </Link> */}
-      <img
+      </Link>
+      {/* <img
           src={imagePath + movie.poster_path}
           alt={movie.title}
-        />
+        /> */}
     </article>
   );
 }
