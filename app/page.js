@@ -14,7 +14,6 @@ export default async function Home() {
 
   return (
     <main>
-      <h1 className="mb-5 text-xl font-bold">Hello next 13</h1>
       <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(400px,1fr))]">
         {res.results.map((movie) => (
           <Movie key={movie.id} movie={movie} />
